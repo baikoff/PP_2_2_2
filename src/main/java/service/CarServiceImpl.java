@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//@Component
+@Component
 public class CarServiceImpl implements CarService {
     List<Car> carList;
 
@@ -18,6 +18,7 @@ public class CarServiceImpl implements CarService {
         carList.add(new Car(3, "Lada", "Red"));
         carList.add(new Car(4, "Ford", "White"));
         carList.add(new Car(5, "Mercedes", "Grey"));
+
 
     }
 

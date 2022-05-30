@@ -19,7 +19,7 @@ public class CarController {
         if (count < 5) {
             model.addAttribute("carList", carService.carsCount(count));
         } else {
-            model.addAttribute("carList", carService.carsCount(count));
+            model.addAttribute("carList", carService.carsCount(999));
         }
         return "carList";
 
