@@ -1,6 +1,6 @@
 package web.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +16,7 @@ public class CarController {
 
     @GetMapping("/cars")
     public String cars(@RequestParam(value = "count", defaultValue = "999") Integer count, Model model) {
-        if (count < 5) {
+        if (count < 5 && count>0) {
             model.addAttribute("carList", carService.carsCount(count));
         } else {
             model.addAttribute("carList", carService.carsCount(999));
